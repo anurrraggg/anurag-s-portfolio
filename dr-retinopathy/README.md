@@ -56,4 +56,11 @@ python src/predict.py path/to/image.jpg
 python src/predict.py path/to/folder
 ```
 
+### Prepare data from a raw folder with class subfolders
+If your raw data is arranged as `raw/CLASS_NAME/*.jpg`, build `train/` and `test/` under `dataset/DR/`:
+```
+python src/prepare_data.py --raw_root path/to/raw --out_root dataset/DR --split 0.2
+python src/train.py --data_root dataset/DR
+```
+
 
