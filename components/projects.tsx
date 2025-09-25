@@ -14,7 +14,7 @@ const projects = [
     status: "Live",
     story: "Built to help myself learn, ended up helping students",
     timeline: " still working on it",
-    
+
     links: {
       github: "https://github.com/anurrraggg/codeduo",
       demo: "https://codeduojs.vercel.app/",
@@ -68,13 +68,12 @@ export function Projects() {
                       </h3>
                       <Badge
                         variant="outline"
-                        className={`text-xs transition-colors duration-300 ${
-                          project.status === "Live"
+                        className={`text-xs transition-colors duration-300 ${project.status === "Live"
                             ? "border-green-500/50 text-green-600 dark:text-green-400"
                             : project.status === "In Progress"
                               ? "border-blue-500/50 text-blue-600 dark:text-blue-400"
                               : "border-orange-500/50 text-orange-600 dark:text-orange-400"
-                        }`}
+                          }`}
                       >
                         {project.status}
                       </Badge>
@@ -115,25 +114,32 @@ export function Projects() {
 
                   {/* Links */}
                   <div className="flex items-center gap-3 pt-2">
+                    {/* This part handles the GitHub link */}
                     {project.links.github && (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="gap-2 hover:text-primary hover:bg-primary/10 transition-all duration-300"
-                      >
-                        <Github className="h-4 w-4" />
-                        Code
-                      </Button>
+                      <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="gap-2 hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                        >
+                          <Github className="h-4 w-4" />
+                          Code
+                        </Button>
+                      </a>
                     )}
+
+                    {/* If you have a demo link, it would go here */}
                     {project.links.demo && (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="gap-2 hover:text-primary hover:bg-primary/10 transition-all duration-300"
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                        Live Demo
-                      </Button>
+                      <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="gap-2 hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                          Live Demo
+                        </Button>
+                      </a>
                     )}
                   </div>
                 </div>
@@ -146,12 +152,12 @@ export function Projects() {
 
           <div className="text-center">
             <a href="https://github.com/anurrraggg" target="_blank" rel="noopener noreferrer">
-  <button class="hover:text-primary transition-colors duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 0C5.37 0 0 5.37 0 12a12 12 0 008.21 11.45c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.74.08-.74 1.22.08 1.86 1.25 1.86 1.25 1.08 1.86 2.84 1.32 3.53 1.01.11-.78.42-1.32.76-1.63-2.66-.3-5.47-1.33-5.47-5.91 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.3-1.23 3.3-1.23.66 1.64.25 2.86.12 3.16.77.84 1.24 1.91 1.24 3.22 0 4.6-2.81 5.61-5.48 5.9.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z" />
-    </svg>
-  </button>
-</a>
+              <button class="hover:text-primary transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 0C5.37 0 0 5.37 0 12a12 12 0 008.21 11.45c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.74.08-.74 1.22.08 1.86 1.25 1.86 1.25 1.08 1.86 2.84 1.32 3.53 1.01.11-.78.42-1.32.76-1.63-2.66-.3-5.47-1.33-5.47-5.91 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.3-1.23 3.3-1.23.66 1.64.25 2.86.12 3.16.77.84 1.24 1.91 1.24 3.22 0 4.6-2.81 5.61-5.48 5.9.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+              </button>
+            </a>
 
           </div>
         </div>
