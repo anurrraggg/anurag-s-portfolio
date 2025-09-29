@@ -26,7 +26,7 @@ export function CircularPhotoFrame() {
         {/* --- YOUR PHOTO IS ADDED HERE --- */}
         <div className="w-full h-full relative">
           <Image
-            src="/photo_2025-09-25_14-36-01.jpg"
+            src="/photo_2025-09-29_21-52-52.jpg" // Replace with your photo path
             alt="Anurag Pandey's photo" // Important for accessibility
             fill
             className={`object-cover transition-transform duration-500 ${
