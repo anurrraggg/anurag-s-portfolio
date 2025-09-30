@@ -8,7 +8,7 @@ const skillCategories = [
     description: "Teaching machines to see patterns I can't",
     skills: ["Neural Networks", "Computer Vision", "NLP", "TensorFlow", "PyTorch", "Scikit-learn"],
     color: "bg-purple-500/10 text-purple-400 border-purple-500/20",
-    story: "From linear regression to transformers - still amazed by what's possible",
+    story: "From linear regression to transformers  still amazed by what's possible",
   },
   {
     title: "Blockchain & Web3",
