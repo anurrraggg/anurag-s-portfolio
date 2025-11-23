@@ -22,7 +22,7 @@ export function Hero() {
           <div className="space-y-6">
             <div className="space-y-2">
               <p className="text-muted-foreground font-mono text-sm animate-gentle-pulse">Hey there, I'm</p>
-              <h1 className="text-4xl lg:text-6xl font-bold text-balance">Anurag Pandey</h1>
+              <h1 className="text-4xl lg:text-6xl font-bold text-balance">ap</h1>
             </div>
 
             <p className="text-xl lg:text-2xl text-foreground font-medium text-balance">
