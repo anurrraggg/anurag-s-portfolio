@@ -49,7 +49,7 @@ export function Skills() {
                 <div className="space-y-3">
                   <h3 className="text-xl font-semibold text-primary">{category.title}</h3>
                   <p className="text-sm text-muted-foreground">{category.description}</p>
-                  <p className="text-xs text-accent italic">{category.story}</p>
+                  <p className="text-xs italic">{category.story}</p>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
