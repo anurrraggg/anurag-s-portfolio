@@ -2,7 +2,8 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, MapPin, Github, Linkedin, Coffee } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Mail, MapPin, Github, Linkedin, Instagram, Coffee } from "lucide-react"
 
 export function Contact() {
   return (
@@ -28,7 +29,7 @@ export function Contact() {
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="h-5 w-5 text-primary" />
-                    <span>Lucknow</span>
+                    <span>Lucknow, India</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Coffee className="h-5 w-5 text-primary" />
@@ -38,25 +39,27 @@ export function Contact() {
               </Card>
 
               <Card className="glass-card p-6 space-y-4">
-                <h3 className="text-xl font-semibold text-primary">Find me online</h3>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold text-primary">Find me online</h3>
+                  <Badge variant="outline" className="text-[10px] uppercase tracking-wider">Socials</Badge>
+                </div>
                 <div className="flex gap-4">
                   <a href="https://github.com/anurrraggg" target="_blank" rel="noopener noreferrer">
-                    <Button variant="ghost" size="icon" className="hover:text-primary">
+                    <Button variant="ghost" size="icon" className="hover:text-primary transition-all duration-300 hover:scale-110">
                       <Github className="h-5 w-5" />
                     </Button>
                   </a>
+                  <a href="https://www.instagram.com/anurrraggg/" target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="icon" className="hover:text-primary transition-all duration-300 hover:scale-110">
+                      <Instagram className="h-5 w-5" />
+                    </Button>
+                  </a>
                   <a href="https://www.linkedin.com/in/anurrraggg/" target="_blank" rel="noopener noreferrer">
-                    <Button variant="ghost" size="icon" className="hover:text-primary">
+                    <Button variant="ghost" size="icon" className="hover:text-primary transition-all duration-300 hover:scale-110">
                       <Linkedin className="h-5 w-5" />
                     </Button>
                   </a>
-                  <a href="mailto:anuragpandey@gmail.com">
-                    <Button variant="ghost" size="icon" className="hover:text-primary">
-                      <Mail className="h-5 w-5" />
-                    </Button>
-                  </a>
                 </div>
-                <p className="text-xs text-muted-foreground">I try to respond to messages within 24 hours</p>
               </Card>
 
             </div>

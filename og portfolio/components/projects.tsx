@@ -8,13 +8,11 @@ const projects = [
   {
     title: "CodeDuo",
     description:
-      "Created a tool in Codeduo to visualize sorting and graph algorithms step-by-step. It helped me understand DSA better and is now used by others to learn core concepts interactively.",
-    tech: ["TypeScript", "React", " NEXT.JS", "Framer Motion"],
+      "Created a tool in CodeDuo to visualize sorting and graph algorithms step-by-step. It helped me understand DSA better and is now used by others to learn core concepts interactively.",
+    tech: ["TypeScript", "React", "Next.js", "Framer Motion"],
     category: "Educational",
     status: "Live",
-    story: "Built to help myself learn, ended up helping students",
-    timeline: " still working on it",
-    
+    timeline: "Ongoing",
     links: {
       github: "https://github.com/anurrraggg/codeduo",
       demo: "https://codeduojs.vercel.app/",
@@ -27,7 +25,6 @@ const projects = [
     tech: ["Python", "TensorFlow", "NLP", "Flask"],
     category: "Machine Learning",
     status: "Research",
-    story: "Built a tool to facilitate reviewing academic papers—streamlines the paper review process through an interactive interface and automation of common review tasks.",
     timeline: "4 months",
     impact: "Research paper submitted",
     links: {
@@ -45,8 +42,7 @@ export function Projects() {
             <h2 className="text-3xl font-bold text-balance">Things I've built</h2>
             <div className="w-16 h-0.5 bg-primary rounded-full" />
             <p className="text-muted-foreground max-w-2xl text-pretty leading-relaxed">
-              Each project tells a story of curiosity, problem-solving, and learning. Here are some that I'm
-              particularly proud of.
+              Here are some that I'm particularly proud of.
             </p>
           </div>
 
@@ -68,21 +64,16 @@ export function Projects() {
                       </h3>
                       <Badge
                         variant="outline"
-                        className={`text-xs transition-colors duration-300 ${
-                          project.status === "Live"
-                            ? "border-green-500/50 text-green-600 dark:text-green-400"
-                            : project.status === "In Progress"
-                              ? "border-blue-500/50 text-blue-600 dark:text-blue-400"
-                              : "border-orange-500/50 text-orange-600 dark:text-orange-400"
-                        }`}
+                        className={`text-xs transition-colors duration-300 ${project.status === "Live"
+                          ? "border-green-500/50 text-green-600 dark:text-green-400"
+                          : project.status === "In Progress"
+                            ? "border-blue-500/50 text-blue-600 dark:text-blue-400"
+                            : "border-orange-500/50 text-orange-600 dark:text-orange-400"
+                          }`}
                       >
                         {project.status}
                       </Badge>
                     </div>
-
-                    <p className="text-sm text-accent font-medium italic opacity-80 group-hover:opacity-100 transition-opacity">
-                      "{project.story}"
-                    </p>
                   </div>
 
                   {/* Description */}
@@ -144,15 +135,13 @@ export function Projects() {
             ))}
           </div>
 
-          <div className="text-center">
+          <div className="flex justify-center pt-8">
             <a href="https://github.com/anurrraggg" target="_blank" rel="noopener noreferrer">
-  <button class="hover:text-primary transition-colors duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 0C5.37 0 0 5.37 0 12a12 12 0 008.21 11.45c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.74.08-.74 1.22.08 1.86 1.25 1.86 1.25 1.08 1.86 2.84 1.32 3.53 1.01.11-.78.42-1.32.76-1.63-2.66-.3-5.47-1.33-5.47-5.91 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.3-1.23 3.3-1.23.66 1.64.25 2.86.12 3.16.77.84 1.24 1.91 1.24 3.22 0 4.6-2.81 5.61-5.48 5.9.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z" />
-    </svg>
-  </button>
-</a>
-
+              <Button variant="outline" className="gap-2 group hover:border-primary/50 transition-all duration-300">
+                <Github className="h-4 w-4 group-hover:text-primary transition-colors" />
+                View more on GitHub
+              </Button>
+            </a>
           </div>
         </div>
       </div>

@@ -1,0 +1,330 @@
+
+> my-v0-project@0.1.0 build
+> next build
+
+ΓÜá `eslint` configuration in next.config.mjs is no longer supported. See more info here: https://nextjs.org/docs/app/api-reference/cli/next#next-lint-options
+ΓÜá Invalid next.config.mjs options detected: 
+ΓÜá     Unrecognized key(s) in object: 'eslint'
+ΓÜá See more info here: https://nextjs.org/docs/messages/invalid-next-config
+ΓÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\anura\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\anura\Desktop\anurag-s-portfolio\og portfolio\package-lock.json
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 12 errors:
+./Desktop/anurag-s-portfolio/og portfolio/app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- C:\Users\anura\Desktop\anurag-s-portfolio\og portfolio\.next\build\chunks\[root-of-the-server]__a27b1d97._.js
+- C:\Users\anura\Desktop\anurag-s-portfolio\og portfolio\.next\build\chunks\[turbopack]_runtime.js
+- C:\Users\anura\Desktop\anurag-s-portfolio\og portfolio\.next\build\postcss.js
+    [at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)]
+    [at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)]
+    [at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)]
+    [at Function._load (node:internal/modules/cjs/loader:1192:37)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:322:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1463:12)]
+    [at require (node:internal/modules/helpers:147:16)]
+    at turbopack:///[turbopack-node]/transforms/postcss.ts:49:25 [C:\Users\anura\Desktop\anurag-s-portfolio\og portfolio\.next\build\chunks\[root-of-the-server]__a27b1d97._.js:134:33]
+    [at <anonymous>]
+
+Import trace:
+  Client Component Browser:
+    ./Desktop/anurag-s-portfolio/og portfolio/app/globals.css [Client Component Browser]
+    ./Desktop/anurag-s-portfolio/og portfolio/app/layout.tsx [Server Component]
+
+
+./Desktop/anurag-s-portfolio/og portfolio/components/ui/badge.tsx:2:1
+Module not found: Can't resolve '@radix-ui/react-slot'
+  1 | import * as React from 'react'
+> 2 | import { Slot } from '@radix-ui/react-slot'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cva, type VariantProps } from 'class-variance-authority'
+  4 |
+  5 | import { cn } from '@/lib/utils'
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/badge.tsx
+    ./Desktop/anurag-s-portfolio/og portfolio/components/skills.tsx
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx:2:1
+Module not found: Can't resolve '@radix-ui/react-slot'
+  1 | import * as React from 'react'
+> 2 | import { Slot } from '@radix-ui/react-slot'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { cva, type VariantProps } from 'class-variance-authority'
+  4 |
+  5 | import { cn } from '@/lib/utils'
+
+
+
+Import traces:
+  Server Component:
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx
+    ./Desktop/anurag-s-portfolio/og portfolio/components/contact.tsx
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx
+
+  Client Component Browser:
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx [Client Component Browser]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Client Component Browser]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Server Component]
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx [Client Component SSR]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Client Component SSR]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Server Component]
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/anurag-s-portfolio/og portfolio/app/layout.tsx:5:1
+Module not found: Can't resolve '@vercel/analytics/next'
+  3 | import { GeistSans } from "geist/font/sans"
+  4 | import { GeistMono } from "geist/font/mono"
+> 5 | import { Analytics } from "@vercel/analytics/next"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { Suspense } from "react"
+  7 | import { ThemeProvider } from "next-themes"
+  8 | import "./globals.css"
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/anurag-s-portfolio/og portfolio/components/ui/badge.tsx:3:1
+Module not found: Can't resolve 'class-variance-authority'
+  1 | import * as React from 'react'
+  2 | import { Slot } from '@radix-ui/react-slot'
+> 3 | import { cva, type VariantProps } from 'class-variance-authority'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | import { cn } from '@/lib/utils'
+  6 |
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/badge.tsx
+    ./Desktop/anurag-s-portfolio/og portfolio/components/skills.tsx
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx:3:1
+Module not found: Can't resolve 'class-variance-authority'
+  1 | import * as React from 'react'
+  2 | import { Slot } from '@radix-ui/react-slot'
+> 3 | import { cva, type VariantProps } from 'class-variance-authority'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | import { cn } from '@/lib/utils'
+  6 |
+
+
+
+Import traces:
+  Server Component:
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx
+    ./Desktop/anurag-s-portfolio/og portfolio/components/contact.tsx
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx
+
+  Client Component Browser:
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx [Client Component Browser]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Client Component Browser]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Server Component]
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx [Client Component SSR]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Client Component SSR]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Server Component]
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/anurag-s-portfolio/og portfolio/lib/utils.ts:1:1
+Module not found: Can't resolve 'clsx'
+> 1 | import { clsx, type ClassValue } from 'clsx'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { twMerge } from 'tailwind-merge'
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+
+
+
+Import traces:
+  Server Component:
+    ./Desktop/anurag-s-portfolio/og portfolio/lib/utils.ts
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/textarea.tsx
+    ./Desktop/anurag-s-portfolio/og portfolio/components/contact.tsx
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx
+
+  Client Component Browser:
+    ./Desktop/anurag-s-portfolio/og portfolio/lib/utils.ts [Client Component Browser]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx [Client Component Browser]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Client Component Browser]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Server Component]
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/anurag-s-portfolio/og portfolio/lib/utils.ts [Client Component SSR]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx [Client Component SSR]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Client Component SSR]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Server Component]
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/anurag-s-portfolio/og portfolio/app/layout.tsx:4:1
+Module not found: Can't resolve 'geist/font/mono'
+  2 | import type { Metadata } from "next"
+  3 | import { GeistSans } from "geist/font/sans"
+> 4 | import { GeistMono } from "geist/font/mono"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Analytics } from "@vercel/analytics/next"
+  6 | import { Suspense } from "react"
+  7 | import { ThemeProvider } from "next-themes"
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/anurag-s-portfolio/og portfolio/app/layout.tsx:3:1
+Module not found: Can't resolve 'geist/font/sans'
+  1 | import type React from "react"
+  2 | import type { Metadata } from "next"
+> 3 | import { GeistSans } from "geist/font/sans"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { GeistMono } from "geist/font/mono"
+  5 | import { Analytics } from "@vercel/analytics/next"
+  6 | import { Suspense } from "react"
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/anurag-s-portfolio/og portfolio/app/layout.tsx:7:1
+Module not found: Can't resolve 'next-themes'
+   5 | import { Analytics } from "@vercel/analytics/next"
+   6 | import { Suspense } from "react"
+>  7 | import { ThemeProvider } from "next-themes"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import "./globals.css"
+   9 |
+  10 | export const metadata: Metadata = {
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/anurag-s-portfolio/og portfolio/components/theme-toggle.tsx:4:1
+Module not found: Can't resolve 'next-themes'
+  2 |
+  3 | import { Moon, Sun } from "lucide-react"
+> 4 | import { useTheme } from "next-themes"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { useEffect, useState } from "react"
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Desktop/anurag-s-portfolio/og portfolio/components/theme-toggle.tsx [Client Component Browser]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Client Component Browser]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Server Component]
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/anurag-s-portfolio/og portfolio/components/theme-toggle.tsx [Client Component SSR]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Client Component SSR]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Server Component]
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/anurag-s-portfolio/og portfolio/lib/utils.ts:2:1
+Module not found: Can't resolve 'tailwind-merge'
+  1 | import { clsx, type ClassValue } from 'clsx'
+> 2 | import { twMerge } from 'tailwind-merge'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+  5 |   return twMerge(clsx(inputs))
+
+
+
+Import traces:
+  Server Component:
+    ./Desktop/anurag-s-portfolio/og portfolio/lib/utils.ts
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/textarea.tsx
+    ./Desktop/anurag-s-portfolio/og portfolio/components/contact.tsx
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx
+
+  Client Component Browser:
+    ./Desktop/anurag-s-portfolio/og portfolio/lib/utils.ts [Client Component Browser]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx [Client Component Browser]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Client Component Browser]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Server Component]
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/anurag-s-portfolio/og portfolio/lib/utils.ts [Client Component SSR]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx [Client Component SSR]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Client Component SSR]
+    ./Desktop/anurag-s-portfolio/og portfolio/components/navigation.tsx [Server Component]
+    ./Desktop/anurag-s-portfolio/og portfolio/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./Desktop/anurag-s-portfolio/og portfolio/components/ui/badge.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/anurag-s-portfolio/og portfolio/app/layout.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/anurag-s-portfolio/og portfolio/components/ui/badge.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/anurag-s-portfolio/og portfolio/components/ui/button.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/anurag-s-portfolio/og portfolio/lib/utils.ts:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/anurag-s-portfolio/og portfolio/app/layout.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/anurag-s-portfolio/og portfolio/app/layout.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/anurag-s-portfolio/og portfolio/app/layout.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/anurag-s-portfolio/og portfolio/components/theme-toggle.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/anurag-s-portfolio/og portfolio/lib/utils.ts:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

@@ -20,30 +20,24 @@ export function CircularPhotoFrame() {
       <div
         className={`absolute inset-4 rounded-full overflow-hidden bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary/20 transition-all duration-500 ${isHovered ? "scale-105 shadow-2xl shadow-primary/20" : "shadow-lg"}`}
       >
-        {/* Photo placeholder with upload hint */}
-        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-background to-muted/50 relative group">
-          {/* Placeholder content */}
-          <div className="text-center space-y-4 transition-opacity duration-300">
-            <div
-              className={`w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center transition-all duration-300 ${isHovered ? "bg-primary/20 scale-110" : ""}`}
-            >
-              <User
-                className={`w-8 h-8 text-primary/60 transition-all duration-300 ${isHovered ? "text-primary" : ""}`}
-              />
-            </div>
-            <div className="space-y-2">
-              <p className="text-sm font-medium text-foreground/80">Your Photo Here</p>
-              <p className="text-xs text-muted-foreground">Add a personal touch</p>
-            </div>
-          </div>
+        {/* Photo container with headshot */}
+        <div className="w-full h-full relative group">
+          <img
+            src="/professional-headshot-of-computer-science-student.jpg"
+            alt="Anurag Pandey"
+            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+          />
 
-          {/* Upload overlay on hover */}
+          {/* Subtle overlay accent */}
+          <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent mix-blend-overlay"></div>
+
+          {/* Upload overlay hint (kept but made more subtle) */}
           <div
-            className={`absolute inset-0 bg-primary/5 backdrop-blur-sm flex items-center justify-center transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
+            className={`absolute inset-0 bg-primary/10 backdrop-blur-[2px] flex items-center justify-center transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
           >
-            <div className="text-center space-y-2">
+            <div className="text-center space-y-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
               <Camera className="w-6 h-6 mx-auto text-primary" />
-              <p className="text-xs font-medium text-primary">Click to add photo</p>
+              <p className="text-xs font-medium text-primary">Anurag Pandey</p>
             </div>
           </div>
         </div>

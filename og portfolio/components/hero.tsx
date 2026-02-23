@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { CircularPhotoFrame } from "@/components/circular-photo-frame"
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
+import { ArrowDown, Github, Instagram, Linkedin, Mail } from "lucide-react"
 import { useState } from "react"
 
 export function Hero() {
@@ -57,6 +57,8 @@ export function Hero() {
                   <Github className="h-5 w-5" />
                 </Button>
               </a>
+
+             
 
               <a
                 href="https://www.linkedin.com/in/anurrraggg/"
