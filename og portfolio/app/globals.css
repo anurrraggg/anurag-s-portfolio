@@ -123,6 +123,7 @@
   }
   body {
     @apply bg-background text-foreground transition-colors duration-500;
+    cursor: none;
   }
   html {
     scroll-behavior: smooth;

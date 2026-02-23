@@ -5,7 +5,13 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { ThemeProvider } from "next-themes"
+import dynamic from "next/dynamic"
 import "./globals.css"
+
+const SmoothScroll = dynamic(
+  () => import("@/components/smooth-scroll").then((m) => m.SmoothScroll),
+  { ssr: false }
+)
 
 export const metadata: Metadata = {
   title: "Anurag Pandey",
@@ -23,6 +29,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange={false}>
+          <SmoothScroll />
           <Suspense fallback={null}>{children}</Suspense>
         </ThemeProvider>
         <Analytics />

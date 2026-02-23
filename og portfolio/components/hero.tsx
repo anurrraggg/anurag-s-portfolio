@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button"
 import { CircularPhotoFrame } from "@/components/circular-photo-frame"
 import { ArrowDown, Github, Instagram, Linkedin, Mail } from "lucide-react"
 import { useState } from "react"
+import dynamic from "next/dynamic"
+
+const SceneBackground = dynamic(
+  () => import("@/components/scene-background").then((m) => m.SceneBackground),
+  { ssr: false }
+)
 
 export function Hero() {
   const [isHovered, setIsHovered] = useState(false)
@@ -17,6 +23,7 @@ export function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative px-4">
+      <SceneBackground />
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
           <div className="space-y-6">
@@ -58,7 +65,7 @@ export function Hero() {
                 </Button>
               </a>
 
-             
+
 
               <a
                 href="https://www.linkedin.com/in/anurrraggg/"
@@ -75,7 +82,7 @@ export function Hero() {
               </a>
 
               <a
-                href="mailto:anuragpandey@gmail.com"
+                href="mailto:anuragpandey945028@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
