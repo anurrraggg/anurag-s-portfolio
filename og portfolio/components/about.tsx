@@ -1,4 +1,10 @@
 import { Card } from "@/components/ui/card"
+import dynamic from "next/dynamic"
+
+const ActivityCalendars = dynamic(
+  () => import("./activity-calendars").then((m) => m.ActivityCalendars),
+  { ssr: false }
+)
 
 export function About() {
   return (
@@ -33,6 +39,7 @@ export function About() {
               </div>
             </div>
           </div>
+          <ActivityCalendars />
         </div>
       </div>
     </section>
