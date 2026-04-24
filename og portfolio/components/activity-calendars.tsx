@@ -27,13 +27,14 @@ export function ActivityCalendars() {
           <Github className="w-6 h-6 text-primary" />
           <h3 className="text-xl font-semibold">GitHub Contributions</h3>
         </div>
-        <Card className="p-6 bg-card/50 backdrop-blur-md border border-primary/10 overflow-x-auto">
-          <div className="min-w-[800px] flex justify-center">
+        <Card className="p-6 bg-card/50 backdrop-blur-md border border-primary/10 overflow-x-auto calendar-container interactive-card">
+          <div className="min-w-[800px] flex justify-center py-2">
             <GitHubCalendar
               key={`github-${refreshKey}`}
               username={githubUsername}
-              blockSize={12}
-              blockMargin={4}
+              blockSize={14}
+              blockMargin={5}
+              blockRadius={4}
               fontSize={14}
               theme={{
                 light: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
@@ -49,8 +50,8 @@ export function ActivityCalendars() {
           <Code2 className="w-6 h-6 text-primary" />
           <h3 className="text-xl font-semibold">LeetCode Activity</h3>
         </div>
-        <Card className="p-6 bg-card/50 backdrop-blur-md border border-primary/10 overflow-x-auto">
-          <div className="min-w-[800px] flex justify-center">
+        <Card className="p-6 bg-card/50 backdrop-blur-md border border-primary/10 overflow-x-auto calendar-container interactive-card">
+          <div className="min-w-[800px] flex justify-center py-2">
             <Leetcodecalendar
               key={`leetcode-${refreshKey}`}
               username={leetcodeUsername}

@@ -303,3 +303,18 @@
 .theme-toggle:hover::before {
   transform: translateX(100%);
 }
+
+/* Custom scrollbar for activity calendars */
+.calendar-container::-webkit-scrollbar {
+  height: 6px;
+}
+.calendar-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.calendar-container::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+.calendar-container::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
